@@ -5,6 +5,7 @@
 //  Created by Mayur Bendale on 07/12/23.
 //
 
+import LocalAuthentication
 import Foundation
 
 class KeychainManager {
@@ -17,9 +18,14 @@ class KeychainManager {
 
     static func save(service: String, username: String, password: String) throws {
         let passwordData = password.data(using: .utf8)
+        let access = SecAccessControlCreateWithFlags(nil, // Use the default allocator.
+                                                     kSecAttrAccessibleWhenUnlockedThisDeviceOnly,
+                                                     .biometryCurrentSet,
+                                                     nil) // Ignore any error.
         let query: [String: Any] = [
             kSecClass as String: kSecClassGenericPassword,
             kSecAttrService as String: service,
+            kSecAttrAccessControl as String: access as Any,
             kSecAttrAccount as String: username,
             kSecValueData as String: passwordData as Any,
         ]
@@ -36,11 +42,16 @@ class KeychainManager {
     }
 
     static func get(service: String, username: String) throws -> String? {
+        let context = LAContext()
+        context.localizedReason = "Access your password on the keychain"
+
         let query: [String: Any] = [
             kSecClass as String: kSecClassGenericPassword,
             kSecAttrService as String: service,
             kSecAttrAccount as String: username,
             kSecReturnData as String: true,
+            kSecUseAuthenticationContext as String: context,
+            kSecUseAuthenticationUI as String: kSecUseAuthenticationUI,
             kSecMatchLimit as String: kSecMatchLimitOne
         ]
 

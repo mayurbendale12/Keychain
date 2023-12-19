@@ -34,8 +34,8 @@ class ViewController: UIViewController {
 
         do {
             try KeychainManager.save(service: service,
-                                 username: usernameTextField.text ?? "",
-                                 password: passwordTextField.text ?? "")
+                                     username: usernameTextField.text ?? "",
+                                     password: passwordTextField.text ?? "")
         } catch {
             print(error)
         }
