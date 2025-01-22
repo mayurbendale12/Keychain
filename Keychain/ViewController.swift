@@ -1,10 +1,3 @@
-//
-//  ViewController.swift
-//  Keychain
-//
-//  Created by Mayur Bendale on 07/12/23.
-//
-
 import UIKit
 
 class ViewController: UIViewController {

@@ -1,10 +1,3 @@
-//
-//  KeychainManager.swift
-//  Keychain
-//
-//  Created by Mayur Bendale on 07/12/23.
-//
-
 import LocalAuthentication
 import Foundation
 

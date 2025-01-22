@@ -13,8 +13,6 @@
 		7782A9DA2B21ADEC0065F6A4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7782A9D82B21ADEC0065F6A4 /* Main.storyboard */; };
 		7782A9DC2B21ADED0065F6A4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7782A9DB2B21ADED0065F6A4 /* Assets.xcassets */; };
 		7782A9DF2B21ADED0065F6A4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7782A9DD2B21ADED0065F6A4 /* LaunchScreen.storyboard */; };
-		7782A9ED2B21EBD50065F6A4 /* KeychainWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7782A9EB2B21EBD50065F6A4 /* KeychainWrapper.swift */; };
-		7782A9EE2B21EBD50065F6A4 /* KeychainItemAccessibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7782A9EC2B21EBD50065F6A4 /* KeychainItemAccessibility.swift */; };
 		7782A9F02B21F2770065F6A4 /* KeychainManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7782A9EF2B21F2770065F6A4 /* KeychainManager.swift */; };
 /* End PBXBuildFile section */
 
@@ -27,8 +25,6 @@
 		7782A9DB2B21ADED0065F6A4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7782A9DE2B21ADED0065F6A4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7782A9E02B21ADED0065F6A4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		7782A9EB2B21EBD50065F6A4 /* KeychainWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychainWrapper.swift; sourceTree = "<group>"; };
-		7782A9EC2B21EBD50065F6A4 /* KeychainItemAccessibility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychainItemAccessibility.swift; sourceTree = "<group>"; };
 		7782A9EF2B21F2770065F6A4 /* KeychainManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -62,7 +58,6 @@
 		7782A9D12B21ADEC0065F6A4 /* Keychain */ = {
 			isa = PBXGroup;
 			children = (
-				7782A9E62B21EB6C0065F6A4 /* KeychainWrapper */,
 				7782A9D22B21ADEC0065F6A4 /* AppDelegate.swift */,
 				7782A9D42B21ADEC0065F6A4 /* SceneDelegate.swift */,
 				7782A9D62B21ADEC0065F6A4 /* ViewController.swift */,
@@ -73,15 +68,6 @@
 				7782A9E02B21ADED0065F6A4 /* Info.plist */,
 			);
 			path = Keychain;
-			sourceTree = "<group>";
-		};
-		7782A9E62B21EB6C0065F6A4 /* KeychainWrapper */ = {
-			isa = PBXGroup;
-			children = (
-				7782A9EC2B21EBD50065F6A4 /* KeychainItemAccessibility.swift */,
-				7782A9EB2B21EBD50065F6A4 /* KeychainWrapper.swift */,
-			);
-			path = KeychainWrapper;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -157,9 +143,7 @@
 			files = (
 				7782A9D72B21ADEC0065F6A4 /* ViewController.swift in Sources */,
 				7782A9F02B21F2770065F6A4 /* KeychainManager.swift in Sources */,
-				7782A9ED2B21EBD50065F6A4 /* KeychainWrapper.swift in Sources */,
 				7782A9D32B21ADEC0065F6A4 /* AppDelegate.swift in Sources */,
-				7782A9EE2B21EBD50065F6A4 /* KeychainItemAccessibility.swift in Sources */,
 				7782A9D52B21ADEC0065F6A4 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
